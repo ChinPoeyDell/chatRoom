@@ -1,0 +1,14 @@
+<div class="right">
+    <h3>
+        
+        <!-- Friend: {{users}} -->
+    </h3>
+    <div class="messages" *ngFor="let user of users; let i = index">
+        Friend: {{user.name}}<br>
+        {{user.chat[user.chat.length - 1].sender}} :
+        {{user.chat[user.chat.length - 1].text}}
+    </div>
+    <div class="form">
+            <input type="text" [formControl]="commentInput" placeholder="message"/> <button (click)="sentMessage()">send</button>
+    </div>
+</div>

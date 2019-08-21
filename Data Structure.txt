@@ -1,0 +1,20 @@
+interface User {
+    name: string
+    email: string
+    chat: Message[]
+}
+
+interface Message {
+    text: string
+    sender: string
+}
+
+users = new BehaviorSubject<User[]>([
+    {
+        name: "John",
+        email: "john@example.com",
+        chat: []
+    }
+])
+
+selectedUser = new BehaviourSubject<number>(0)
